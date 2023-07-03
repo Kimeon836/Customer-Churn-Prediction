@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Customer Form</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background: rgb(223,223,232);
+background: linear-gradient(9deg, rgba(223,223,232,1) 14%, rgba(246,246,246,1) 39%);
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 1%;
+            padding-bottom: 2%;
+
+        }
+
+        .form-container {
+            /* width: 100%; */
+            /* background-color: aqua; */
+            /* max-width: 1200px; */
+            /* margin-left: 10%; */
+            padding-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-wrap: wrap;
+            flex-direction: column; */
+            align-content: center;
+            align-items: flex-start;
+            /* justify-content: center; */
+            /* justify-self: center; */
+            /* align-items:start; */
+            gap: 15px;
+        }
+
+        .form-field label {
+            margin-right: 10px;
+        }
+        input[type=text] { 
+            width: 200px;
+
+}
+         select {
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 0 15px 4px rgba(53, 112, 221, 0.06);
+            border-radius: 10px;
+            background-color: white;
+        }
+
+
+        .form-field {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 200px 100px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+    
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h1>Customer Churn</h1>
+   
+    <div class="form-field">
+        <form id="formUpload">
+            <input class="form-control w-auto" type="file" name="file" id="select-file" aria-describedby="inputGroupFileAddon04" required />
+            <button class="btn btn-primary text-center" id="uploadButton" type="submit">
+
+                <span id="upload-btn">
+                    Upload
+                </span>
+            </button>
+        </form>
+    </div>
+    <h3>
+        OR
+    </h3>
+    <form class="ma" method="POST">
+        <div class="form-container">
+
+            <div class="form-field">
+                <label for="gender">Gender:</label>
+                <select class="form-select-sm"  name="gender" id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="SeniorCitizen">Senior Citizen:</label>
+                <select class="form-select-sm"  name="SeniorCitizen" id="SeniorCitizen" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="Partner">Partner:</label>
+                <select class="form-select-sm"  name="Partner" id="Partner" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="Dependents">Dependents:</label>
+                <select class="form-select-sm"  name="Dependents" id="Dependents" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+
+            <div class="form-field">
+                <label for="PhoneService">Phone Service:</label>
+                <select  class="form-select-sm" name="PhoneService" id="PhoneService" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="MultipleLines">Multiple Lines:</label>
+                <select class="form-select-sm"  name="MultipleLines" id="MultipleLines" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No phone service">No phone service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="InternetService">Internet Service:</label>
+                <select class="form-select-sm"  name="InternetService" id="InternetService" required>
+                    <option value="DSL">DSL</option>
+                    <option value="Fiber optic">Fiber optic</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="OnlineSecurity">Online Security:</label>
+                <select class="form-select-sm"  name="OnlineSecurity" id="OnlineSecurity" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="OnlineBackup">Online Backup:</label>
+                <select class="form-select-sm"  name="OnlineBackup" id="OnlineBackup" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="DeviceProtection">Device Protection:</label>
+                <select class="form-select-sm"  name="DeviceProtection" id="DeviceProtection" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="TechSupport">Tech Support:</label>
+                <select class="form-select-sm"  name="TechSupport" id="TechSupport" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="StreamingTV">Streaming TV:</label>
+                <select class="form-select-sm"  name="StreamingTV" id="StreamingTV" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="StreamingMovies">Streaming Movies:</label>
+                <select class="form-select-sm"  name="StreamingMovies" id="StreamingMovies" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="Contract">Contract:</label>
+                <select class="form-select-sm"  name="Contract" id="Contract" required>
+                    <option value="Month-to-month">Month-to-month</option>
+                    <option value="One year">One year</option>
+                    <option value="Two year">Two year</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="PaperlessBilling">Paperless Billing:</label>
+                <select class="form-select-sm"  name="PaperlessBilling" id="PaperlessBilling" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="PaymentMethod">Payment Method:</label>
+                <select class="form-select-sm"  name="PaymentMethod" id="PaymentMethod" required>
+                    <option value="Bank transfer">Bank transfer</option>
+                    <option value="Credit card">Credit card</option>
+                    <option value="Electronic check">Electronic check</option>
+                    <option value="Mailed check">Mailed check</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="tenure">Tenure:</label>
+                <input class="form-control" type="text" name="tenure" id="tenure" pattern="[0-9]{1,}" autocomplete="off" required>
+            </div>
+
+            <div class="form-field">
+                <label for="MonthlyCharges">Monthly Charges:</label>
+                <input type="text" class="form-control" name="MonthlyCharges" pattern="[0-9]{1,}" autocomplete="off" id="MonthlyCharges"
+                    required>
+            </div>
+
+            <div class="form-field">
+                <label for="TotalCharges">Total Charges:</label>
+                <input type="text" class="form-control" name="TotalCharges" pattern="[0-9]{1,}" autocomplete="off" id="TotalCharges" required>
+            </div>
+            <div class="form-submit form-field">
+                <input class="btn btn-success" type="submit" value="Submit">
+            </div>
+
+
+        </div>
+    </form>
+    
+    <script>
+        let formParent = document.getElementById("formUpload");
+        let uploadBtn = document.getElementById("uploadButton");
+        let uploadTxt = document.getElementById("upload-btn");
+        let selectFile = document.getElementById("select-file");
+        let loader = document.createElement("span");
+        loader.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...`
+
+        formParent.addEventListener('submit', (event) => {
+            event.preventDefault();
+            uploadBtn.removeChild(uploadTxt);
+            uploadBtn.appendChild(loader);
+            selectFile.disabled = true;
+            function navigate() {
+                window.location.href = '/result';
+            }
+            const formData = new FormData();
+            console.log(event.target.file.files[0])
+            console.log(event.target.files)
+            formData.append("file", event.target.file.files[0]);
+
+            fetch("/processfile", {
+                method: "POST",
+                body: formData,
+            })
+                .then(navigate)
+
+
+
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
